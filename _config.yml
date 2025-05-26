@@ -21,7 +21,7 @@ future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            :
   discourse:
@@ -73,20 +73,21 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
+  # provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provide                : false
+  #google:
+    #tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Malik Khizar Hayat"
   avatar           : "profile.jpg"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Research Assistant specializing in Data Science and Machine Learning. Passionate about turning data into insights and developing intelligent systems."
   location         : "Sydney, Australia"
   employer         :
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=0n8cN8cAAAAJ"
-  email            :
+  email            : "khizerhayat92@gmail.com"
   researchgate     :  "https://www.researchgate.net/profile/Malik-Khizar-Hayat"
   uri              :
   bitbucket        :
@@ -101,14 +102,14 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "malik-khizar-hayat"
+  linkedin         : "https://www.linkedin.com/in/malik-khizar-hayat"
   orcid            : "https://orcid.org/0000-0001-8177-2042"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  #twitter          : "replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
