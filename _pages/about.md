@@ -16,7 +16,14 @@ Prior to my PhD, I graduated from the International Islamic University Islamabad
 
 With over 5 years of teaching, academic, and research experience, I am passionate about advancing knowledge in data science and machine learning.
 
-# My work and research
+## Research Interests
+
+- **Graph Mining**
+- **Data Mining**
+- **Hypergraph Learning**
+- **Graph Neural Networks**
+
+# Research Experience
 During my PhD studies, I explored graph data mining, particularly the intricate patterns and dynamics of hypergraphs within real-world graph structures. My research moved beyond traditional pairwise relationships to study multifaceted interactions, developing hypergraph neural networks to capture and analyze these complex relationships.
 
 By designing innovative models, I addressed the limitations of traditional graphs, enabling more robust representations of complex systems. These hypergraph structures provide richer data representations, uncovering subtle patterns and higher-order dependencies often missed in conventional approaches.
