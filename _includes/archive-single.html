@@ -21,21 +21,28 @@
         {% assign formatted_authors = "" %}
         
         {% for author in authors %}
+          {% assign author = author | strip %}
           {% if author contains "Malik Khizar Hayat" %}
-            {% assign formatted_authors = formatted_authors | append: "<strong>" | append: author | append: "</strong>" | append: ", " %}
+            {% assign formatted_authors = formatted_authors | append: "<strong>" | append: author | append: "</strong>" %}
           {% else %}
-            {% assign formatted_authors = formatted_authors | append: author | append: ", " %}
+            {% assign formatted_authors = formatted_authors | append: author %}
+          {% endif %}
+          
+          {% if forloop.last == false %}
+            {% assign formatted_authors = formatted_authors | append: ", " %}
+          {% elsif forloop.last == true and authors.size > 1 %}
+            {% assign formatted_authors = formatted_authors | append: " and " %}
           {% endif %}
         {% endfor %}
         
-        <!-- Clean up extra comma at the end of authors list -->
-        {% assign formatted_authors = formatted_authors | slice: 0, formatted_authors.size - 2 %}
-
-        <!-- Display formatted authors with citation info -->
+        <!-- Remove extra comma if present -->
         {{ formatted_authors }},
-        "{{ post.title }}." 
+        
+        <!-- Add title and venue info -->
+        "{{ post.title }}."
         <i>{{ post.venue }}</i>
         
+        <!-- Display volume and pages if available -->
         {% if post.volume %}
           , vol. {{ post.volume }}
         {% endif %}
@@ -45,11 +52,12 @@
         {% endif %}
         
         {% if post.date %}
-          , {{ post.date | date: "%Y" }}
-        {% endif %}.
+          , {{ post.date | date: "%Y" }}.
+        {% endif %}
         
+        <!-- Display DOI with label -->
         {% if post.doi %}
-          <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
+          , doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
       </li>
     </ul>
