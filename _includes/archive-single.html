@@ -16,10 +16,24 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <ul class="publication-list">
       <li>
-        <!-- Bold your name only -->
-        <strong>Malik Khizar Hayat</strong>
-        , {{ post.authors | remove: 'Malik Khizar Hayat' | strip_newlines }} 
-        , "{{ post.title }}." 
+        <!-- Loop through authors and bold your name if present -->
+        {% assign authors = post.authors | split: "," %}
+        {% assign formatted_authors = "" %}
+        
+        {% for author in authors %}
+          {% if author contains "Malik Khizar Hayat" %}
+            {% assign formatted_authors = formatted_authors | append: "<strong>" | append: author | append: "</strong>" | append: ", " %}
+          {% else %}
+            {% assign formatted_authors = formatted_authors | append: author | append: ", " %}
+          {% endif %}
+        {% endfor %}
+        
+        <!-- Clean up extra comma at the end of authors list -->
+        {% assign formatted_authors = formatted_authors | slice: 0, formatted_authors.size - 2 %}
+
+        <!-- Display formatted authors with citation info -->
+        {{ formatted_authors }},
+        "{{ post.title }}." 
         <i>{{ post.venue }}</i>
         
         {% if post.volume %}
