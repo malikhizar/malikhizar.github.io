@@ -16,9 +16,26 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <ul class="publication-list">
       <li>
-        <strong>{{ post.authors }}</strong>, "{{ post.title }}." <i>{{ post.venue }}</i>, vol. {{ post.volume | default: 'N/A' }}, pp. {{ post.pages | default: 'N/A' }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}. 
+        <!-- Bold your name only -->
+        <strong>Malik Khizar Hayat</strong>
+        , {{ post.authors | remove: 'Malik Khizar Hayat' | strip_newlines }} 
+        , "{{ post.title }}." 
+        <i>{{ post.venue }}</i>
+        
+        {% if post.volume %}
+          , vol. {{ post.volume }}
+        {% endif %}
+        
+        {% if post.pages %}
+          , pp. {{ post.pages }}
+        {% endif %}
+        
+        {% if post.date %}
+          , {{ post.date | date: "%Y" }}
+        {% endif %}.
+        
         {% if post.doi %}
-          <a href="https://doi.org/{{ post.doi }}" target="_blank">doi: {{ post.doi }}</a>.
+          <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
       </li>
     </ul>
