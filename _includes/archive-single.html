@@ -35,7 +35,7 @@
         "{{ post.title }}."
         <i>{{ post.venue }}</i>
         
-        <!-- Handle Volume and Pages -->
+        <!-- Check for volume and pages, and display them if not N/A or empty -->
         {% if post.volume != "N/A" and post.volume != "" %}
           , vol. {{ post.volume }}
         {% endif %}
