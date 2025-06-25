@@ -16,13 +16,13 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <ul class="publication-list">
       <li>
-        <!-- Loop through authors and bold your name if present -->
+        <!-- Loop through authors and bold only "Malik Khizar Hayat" -->
         {% assign authors = post.authors | split: "," %}
         {% assign formatted_authors = "" %}
         
         {% for author in authors %}
           {% assign author = author | strip %}
-          {% if author contains "Malik Khizar Hayat" %}
+          {% if author == "Malik Khizar Hayat" %}
             {% assign formatted_authors = formatted_authors | append: "<strong>" | append: author | append: "</strong>" %}
           {% else %}
             {% assign formatted_authors = formatted_authors | append: author %}
@@ -35,14 +35,14 @@
           {% endif %}
         {% endfor %}
         
-        <!-- Remove extra comma if present -->
+        <!-- Remove any extra commas or spaces at the end -->
         {{ formatted_authors }},
         
         <!-- Add title and venue info -->
         "{{ post.title }}."
         <i>{{ post.venue }}</i>
         
-        <!-- Display volume and pages if available -->
+        <!-- Display volume and pages if available, avoid displaying 'N/A' -->
         {% if post.volume %}
           , vol. {{ post.volume }}
         {% endif %}
@@ -55,7 +55,7 @@
           , {{ post.date | date: "%Y" }}.
         {% endif %}
         
-        <!-- Display DOI with label -->
+        <!-- Add DOI with proper formatting -->
         {% if post.doi %}
           , doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
