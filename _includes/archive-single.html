@@ -16,26 +16,19 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <ul class="publication-list">
       <li>
-        <!-- Loop through authors and bold only "Malik Khizar Hayat" -->
-        {% assign authors = post.authors | split: "," %}
+        <!-- Handle the authors as a single string -->
+        {% assign authors = post.authors | strip %}
+        
+        <!-- Bold only "Malik Khizar Hayat" -->
         {% assign formatted_authors = "" %}
         
-        {% for author in authors %}
-          {% assign author = author | strip %}
-          {% if author == "Malik Khizar Hayat" %}
-            {% assign formatted_authors = formatted_authors | append: "<strong>" | append: author | append: "</strong>" %}
-          {% else %}
-            {% assign formatted_authors = formatted_authors | append: author %}
-          {% endif %}
-          
-          {% if forloop.last == false %}
-            {% assign formatted_authors = formatted_authors | append: ", " %}
-          {% elsif forloop.last == true and authors.size > 1 %}
-            {% assign formatted_authors = formatted_authors | append: " and " %}
-          {% endif %}
-        {% endfor %}
+        {% if authors contains "Malik Khizar Hayat" %}
+          {% assign formatted_authors = authors | replace: "Malik Khizar Hayat", "<strong>Malik Khizar Hayat</strong>" %}
+        {% else %}
+          {% assign formatted_authors = authors %}
+        {% endif %}
         
-        <!-- Clean up any extra commas or spaces at the end -->
+        <!-- Display the formatted authors -->
         {{ formatted_authors }},
         
         <!-- Add title and venue info -->
