@@ -1,10 +1,10 @@
 ---
 title: "Finding Rising Stars in Bibliometrics Networks"
-authors: Ali Daud, Min Song, Malik Khizar Hayat, Tehmina Amjad, Rabeeh Ayaz Abbasi, Hassan Dawood, Anwar Ghani
+authors: Ali Daud, Min Song, Malik Khizar Hayat, Tehmina Amjad, Rabeeh Ayaz Abbasi, Hassan Dawood, and Anwar Ghani
 venue: Scientometrics
 date: 2020-01-01
 doi: 10.1007/s11192-020-03466-w
 slug: finding-rising-stars
 ---
 
-- Ali Daud, Min Song, Malik Khizar Hayat, Tehmina Amjad, Rabeeh Ayaz Abbasi, Hassan Dawood, Anwar Ghani, "Finding Rising Stars in Bibliometrics Networks.", Scientometrics, vol. 124.0, pp. 633-661, 2020-01-01. [doi: 10.1007/s11192-020-03466-w](10.1007/s11192-020-03466-w)
+- Ali Daud, Min Song, Malik Khizar Hayat, Tehmina Amjad, Rabeeh Ayaz Abbasi, Hassan Dawood, and Anwar Ghani, "Finding Rising Stars in Bibliometrics Networks.", Scientometrics, vol. 124.0, pp. 633-661, 2020-01-01. [doi: 10.1007/s11192-020-03466-w](10.1007/s11192-020-03466-w)
