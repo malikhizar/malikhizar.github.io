@@ -35,14 +35,14 @@
           {% endif %}
         {% endfor %}
         
-        <!-- Remove any extra commas or spaces at the end -->
+        <!-- Clean up extra comma at the end -->
         {{ formatted_authors }},
         
         <!-- Add title and venue info -->
         "{{ post.title }}."
         <i>{{ post.venue }}</i>
         
-        <!-- Display volume and pages if available, avoid displaying 'N/A' -->
+        <!-- Display volume and pages if available -->
         {% if post.volume %}
           , vol. {{ post.volume }}
         {% endif %}
