@@ -35,12 +35,12 @@
         "{{ post.title }}."
         <i>{{ post.venue }}</i>
         
-        <!-- Display volume and pages if available -->
-        {% if post.volume %}
+        <!-- Display volume and pages if available and not "N/A" -->
+        {% if post.volume != "N/A" %}
           , vol. {{ post.volume }}
         {% endif %}
         
-        {% if post.pages %}
+        {% if post.pages != "N/A" %}
           , pp. {{ post.pages }}
         {% endif %}
         
