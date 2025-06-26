@@ -27,14 +27,22 @@ author_profile: true
   {% assign publications_by_year[year] = publications_by_year[year] | append: post.url | append: "," %}
 {% endfor %}
 
-<!-- Loop through the publications_by_year and display publications under each year -->
-{% assign sorted_years = publications_by_year | keys | sort: "desc" %}
-{% for year in sorted_years %}
-  <h2>{{ year }}</h2> <!-- Display the year as a heading -->
-
-  {% assign post_urls = publications_by_year[year] | split: "," %}
-  {% for post_url in post_urls %}
-    {% assign post = site.publications | where: "url", post_url | first %}
-    {% include archive-single.html %}
+<!-- Make sure publications_by_year is not empty before sorting -->
+{% if publications_by_year.size > 0 %}
+  {% assign sorted_years = publications_by_year | keys | sort: "desc" %}
+  
+  {% for year in sorted_years %}
+    <h2>{{ year }}</h2> <!-- Display the year as a heading -->
+    <ul>
+      {% assign post_urls = publications_by_year[year] | split: "," %}
+      {% for post_url in post_urls %}
+        {% assign post = site.publications | where: "url", post_url | first %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.venue }}
+        </li>
+      {% endfor %}
+    </ul>
   {% endfor %}
-{% endfor %}
+{% else %}
+  <p>No publications found.</p> <!-- Handle the case where no publications are available -->
+{% endif %}
