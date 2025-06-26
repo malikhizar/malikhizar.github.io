@@ -11,16 +11,32 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Group publications by the year extracted from pub_date -->
-{% assign grouped_by_year = site.publications | group_by: "pub_date" %}
+{% assign publications_by_year = {} %}
 
-<!-- Extract the year from pub_date -->
-{% assign grouped_by_year = grouped_by_year | map: "name" | map: "slice: 0, 4" %} <!-- Extract the year -->
+<!-- Loop through all publications and group them by year -->
+{% for post in site.publications %}
+  {% assign year = post.pub_date | slice: 0, 4 %} <!-- Extract year from pub_date -->
 
-{% for group in grouped_by_year reversed %}
-  <h2>{{ group.name }}</h2> <!-- Display the year as a heading -->
+  <!-- Initialize year group if not already done -->
+  {% if publications_by_year[year] == nil %}
+    {% assign publications_by_year[year] = "" %}
+  {% endif %}
 
-  {% for post in group.items %}
-    {% include archive-single.html %}
-  {% endfor %}
+  <!-- Append the post to the respective year group -->
+  {% assign publications_by_year[year] = publications_by_year[year] | append: post.url | append: "," %}
+{% endfor %}
+
+<!-- Loop through the publications_by_year and display publications under each year -->
+{% assign sorted_years = publications_by_year | keys | sort: "desc" %}
+{% for year in sorted_years %}
+  <h2>{{ year }}</h2>
+  {% assign post_urls = publications_by_year[year] | split: "," %}
+  <ul>
+    {% for post_url in post_urls %}
+      {% assign post = site.publications | where: "url", post_url | first %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.venue }}
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
