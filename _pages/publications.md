@@ -11,16 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign grouped_by_year = site.publications | group_by: "pub_date" %}
-
-{% assign grouped_by_year = grouped_by_year | map: "name" | map: "slice: 0, 4" %} <!-- Extract the year -->
-
-{% for group in grouped_by_year reversed %}
-  <h2>{{ group.name }}</h2> <!-- Display the year as a heading -->
-
-  <ul>
-    {% for post in group.items %}
-      {% include archive-single.html %}
-    {% endfor %}
-  </ul>
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
 {% endfor %}
