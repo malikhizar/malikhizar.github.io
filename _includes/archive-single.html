@@ -33,24 +33,24 @@
         
         <!-- Add title and venue info -->
         "{{ post.title }}."
-        <i>{{ post.venue }}</i>
+        <i>{{ post.venue }}</i>,
         
         <!-- Check for volume and pages, and display them if not N/A or empty -->
         {% if post.volume and post.volume != "N/A" and post.volume != "" %}
-          , vol. {{ post.volume }}
+          vol. {{ post.volume }},
         {% endif %}
 
         {% if post.pages and post.pages != "N/A" and post.pages != "" %}
-          , pp. {{ post.pages }}
+          pp. {{ post.pages }},
         {% endif %}
         
         {% if post.date %}
-          , {{ post.date | date: "%Y" }}
+          {{ post.date | date: "%Y" }}.
         {% endif %}
         
         <!-- Add DOI with proper formatting -->
         {% if post.doi %}
-          . doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
+          doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
       </li>
     </ul>
