@@ -11,7 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Print pub_date for all publications to debug -->
-{% for post in site.publications %}
-  <p>Publication Date: {{ post.pub_date }}</p>  <!-- Display the pub_date for each publication -->
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
 {% endfor %}
