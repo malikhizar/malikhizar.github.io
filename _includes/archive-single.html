@@ -36,11 +36,11 @@
         <i>{{ post.venue }}</i>
         
         <!-- Check for volume and pages, and display them if not N/A or empty -->
-        {% if post.volume != "N/A" and post.volume != "" %}
+        {% if post.volume and post.volume != "N/A" and post.volume != "" %}
           , vol. {{ post.volume }}
         {% endif %}
-        
-        {% if post.pages != "N/A" and post.pages != "" %}
+
+        {% if post.pages and post.pages != "N/A" and post.pages != "" %}
           , pp. {{ post.pages }}
         {% endif %}
         
