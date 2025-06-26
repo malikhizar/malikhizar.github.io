@@ -11,6 +11,30 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
+<!-- Group publications by year -->
+{% assign publications_by_year = {} %}
+
+<!-- Loop through all publications and group them by year -->
+{% for post in site.publications %}
+  {% assign year = post.pub_date | slice: 0, 4 %} <!-- Extract year from pub_date -->
+  
+  <!-- Initialize year group if not already done -->
+  {% if publications_by_year[year] == nil %}
+    {% assign publications_by_year[year] = "" %}
+  {% endif %}
+  
+  <!-- Append the post to the respective year group -->
+  {% assign publications_by_year[year] = publications_by_year[year] | append: post.url | append: "," %}
+{% endfor %}
+
+<!-- Loop through the publications_by_year and display publications under each year -->
+{% assign sorted_years = publications_by_year | keys | sort: "desc" %}
+{% for year in sorted_years %}
+  <h2>{{ year }}</h2> <!-- Display the year as a heading -->
+
+  {% assign post_urls = publications_by_year[year] | split: "," %}
+  {% for post_url in post_urls %}
+    {% assign post = site.publications | where: "url", post_url | first %}
+    {% include archive-single.html %}
+  {% endfor %}
 {% endfor %}
