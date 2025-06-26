@@ -45,12 +45,12 @@
         {% endif %}
         
         {% if post.date %}
-          , {{ post.date | date: "%Y" }}.
+          , {{ post.date | date: "%Y" }}
         {% endif %}
         
         <!-- Add DOI with proper formatting -->
         {% if post.doi %}
-          , doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
+          . doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
       </li>
     </ul>
