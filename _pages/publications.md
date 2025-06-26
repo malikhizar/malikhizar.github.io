@@ -18,6 +18,9 @@ author_profile: true
 {% for post in site.publications %}
   {% assign year = post.pub_date | slice: 0, 4 %} <!-- Extract year from pub_date -->
   
+  <!-- Print the year for debugging -->
+  <p>Debug: {{ post.title }} - Year: {{ year }}</p>
+
   <!-- Initialize year group if not already done -->
   {% if publications_by_year[year] == nil %}
     {% assign publications_by_year[year] = "" %}
