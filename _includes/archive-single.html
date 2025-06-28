@@ -14,8 +14,7 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <ul class="publication-list">
-      <li>
+    <li>
         <!-- Handle the authors as a single string -->
         {% assign authors = post.authors | strip %}
         
@@ -52,7 +51,6 @@
         {% if post.doi %}
           doi: <a href="https://doi.org/{{ post.doi }}" target="_blank">{{ post.doi }}</a>
         {% endif %}
-      </li>
-    </ul>
+    </li>
   </article>
 </div>
