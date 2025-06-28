@@ -10,7 +10,7 @@
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
+            {% else %}
               {% assign domain = base_path %}
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
@@ -21,3 +21,19 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Make the navigation sticky */
+  .masthead__menu {
+    position: sticky; /* Makes the menu sticky */
+    top: 0; /* Keeps it at the top of the page */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    background-color: white; /* Optional: Add a background color for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  }
+
+  /* Optional: Adjust the body padding to avoid content overlapping the sticky navbar */
+  body {
+    padding-top: 60px; /* Adjust based on the height of the sticky navbar */
+  }
+</style>
