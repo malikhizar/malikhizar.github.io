@@ -4,26 +4,34 @@
   <style>
     .page__footer-copyright {
       text-align: center; /* Centers the footer content */
-      font-size: 1.1em; /* Increases font size slightly */
     }
 
     .page__footer-copyright .footer-text {
-      display: inline-block; /* Makes sure the text stays on one line */
-    }
-
-    .page__footer-copyright .name {
-      font-weight: bold; /* Makes the name bold */
+      display: inline-block; /* Keeps the text on the same line */
     }
 
     .page__footer-copyright .separator {
-      margin: 0 5px; /* Adjusts space between name and year */
-      font-size: 1.2em; /* Increases the size of the separator (bullet) */
+      margin: 0 5px; /* Adds space between name, bullet, and year */
+      font-size: 1.2em; /* Increases the size of the bullet */
+    }
+
+    .page__footer-copyright .powered-by {
+      display: block; /* Moves the "Powered by Jekyll" to the next line */
+      margin-top: 5px; /* Adds some space above "Powered by Jekyll" */
+    }
+
+    .page__footer-copyright a {
+      text-decoration: none; /* Removes underline from the link */
+      color: inherit; /* Keeps the same color for the link */
     }
   </style>
-  
+
   <p>
     <span class="footer-text">
-      &copy; {{ site.time | date: '%Y' }} <span class="name">{{ site.name | default: site.title }}</span> <span class="separator">&bull;</span> Powered by Jekyll &amp; AcademicPages, a fork of Minimal Mistakes.
+      <span class="name">{{ site.name | default: site.title }}</span> <span class="separator">&bull;</span> <span class="year">{{ site.time | date: '%Y' }}</span>
+    </span>
+    <span class="powered-by">
+      Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io" rel="nofollow">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
     </span>
   </p>
 </div>
