@@ -1,3 +1,29 @@
 {% include base_path %}
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">
+  <style>
+    .page__footer-copyright {
+      text-align: center; /* Centers the footer content */
+      font-size: 1.1em; /* Increases font size slightly */
+    }
+
+    .page__footer-copyright .footer-text {
+      display: inline-block; /* Makes sure the text stays on one line */
+    }
+
+    .page__footer-copyright .name {
+      font-weight: bold; /* Makes the name bold */
+    }
+
+    .page__footer-copyright .separator {
+      margin: 0 5px; /* Adjusts space between name and year */
+      font-size: 1.2em; /* Increases the size of the separator (bullet) */
+    }
+  </style>
+  
+  <p>
+    <span class="footer-text">
+      &copy; {{ site.time | date: '%Y' }} <span class="name">{{ site.name | default: site.title }}</span> <span class="separator">&bull;</span> Powered by Jekyll &amp; AcademicPages, a fork of Minimal Mistakes.
+    </span>
+  </p>
+</div>
