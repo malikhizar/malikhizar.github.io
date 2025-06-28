@@ -13,7 +13,7 @@ author_profile: true
 
 {% assign grouped_posts = site.publications | group_by_exp:"post","post.date | date: '%Y'" %}
 
-{% for group in grouped_posts %}
+{% for group in grouped_posts reversed %} <!-- Add reversed here -->
   <h2>{{ group.name }}</h2> <!-- This will display the year (group name) -->
 
   <ul class="publication-list">
