@@ -4,6 +4,8 @@
   <style>
     .page__footer-copyright {
       text-align: center; /* Centers the footer content */
+      margin: 0; /* Removes margin around the footer */
+      padding: 5px 0; /* Adds a small padding to the top and bottom */
     }
 
     .page__footer-copyright .footer-text {
@@ -25,13 +27,13 @@
       color: inherit; /* Keeps the same color for the link */
     }
   </style>
-
+  
   <p>
     <span class="footer-text">
       <span class="name">{{ site.name | default: site.title }}</span> <span class="separator">&bull;</span> <span class="year">{{ site.time | date: '%Y' }}</span>
     </span>
     <span class="powered-by">
-      Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io" rel="nofollow">AcademicPages</a>.
+      Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io" rel="nofollow">AcademicPages.
     </span>
   </p>
 </div>
