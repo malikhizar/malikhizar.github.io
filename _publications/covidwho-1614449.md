@@ -4,7 +4,7 @@ authors: Abdulrahman A. Alshdadi, Malik Khizar Hayat, Ali Daud, Ameen Banjar, an
 venue: International Journal of Advanced and Applied Sciences
 date: 2022-01-01
 doi: 10.21833/ijaas.2022.01.004
-slug: covidwho-1614449
+slug: covid19-oil
 volume: 9
 pages: 27-33
 ---
