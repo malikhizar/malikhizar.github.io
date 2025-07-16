@@ -3,7 +3,7 @@ title: "Measuring the impact of COVID-19 surveillance variables over the interna
 authors: Abdulrahman A. Alshdadi, Malik Khizar Hayat, Ali Daud, Ameen Banjar, and Hussain Dawood
 venue: International Journal of Advanced and Applied Sciences
 date: 2022-01-01
-doi: covidwho-1614449
+doi: 10.21833/ijaas.2022.01.004
 slug: covidwho-1614449
 volume: 9
 pages: 27-33
