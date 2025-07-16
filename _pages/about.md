@@ -10,9 +10,9 @@ redirect_from:
 ---
 
 ## About
-I am a Research Assistant and PhD graduate in Computing from Macquarie University, Sydney, Australia, where I completed my PhD in July 2025. My research was supervised by Prof [Jian Yang](https://researchers.mq.edu.au/en/persons/jian-yang), Assoc Prof [Jia Wu](https://web.science.mq.edu.au/~jiawu/), and Dr [Shan Xue](https://researchers.mq.edu.au/en/persons/emma-xue), focusing on hypergraph learning—an exciting area of machine learning that analyzes complex, higher-order relationships in data.
+I am a Research Assistant and PhD graduate in Computing from Macquarie University, Sydney, Australia, where I completed my PhD in July 2025. My research was supervised by Professor [Jian Yang](https://researchers.mq.edu.au/en/persons/jian-yang), Associate Professor [Jia Wu](https://web.science.mq.edu.au/~jiawu/), and Dr [Shan Xue](https://researchers.mq.edu.au/en/persons/emma-xue), focusing on hypergraph learning—an exciting area of machine learning that analyzes complex, higher-order relationships in data.
 
-Prior to my PhD, I graduated from the International Islamic University Islamabad, Pakistan, in 2016 with a focus on Data Mining in Information Networks under the supervision of Dr [Ali Daud](https://ra.ac.ae/en/faculty/bio/prof-ali-daud).
+Prior to my PhD, I graduated from the International Islamic University Islamabad, Pakistan, in 2016 with a focus on Data Mining in Information Networks under the supervision of Professor [Ali Daud](https://ra.ac.ae/en/faculty/bio/prof-ali-daud).
 
 With over 5 years of teaching, academic, and research experience, I am passionate about advancing knowledge in data science and machine learning.
 
