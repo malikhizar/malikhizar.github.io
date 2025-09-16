@@ -8,4 +8,4 @@ slug: hypergraph-framework-dynamic-session-icdm
 pages:
 ---
 
-- Bilal Khan, Jia Wu, Malik Khizar Hayat, Jian Yang, and Shan Xue, "Hypergraphs and Transformer Learning for Category-Aware Cross-Domain Session Recommendations.", Submitted in the 2025 IEEE International Conference on Data Mining (ICDM), 2025-01-01.
+- Bilal Khan, Jia Wu, Malik Khizar Hayat, Jian Yang, and Shan Xue, "Hypergraphs and Transformer Learning for Category-Aware Cross-Domain Session Recommendations.", Submitted in the ACM World Wide Web Conference (WWW), 2026-01-01.
