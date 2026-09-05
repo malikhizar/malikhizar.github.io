@@ -5,9 +5,157 @@ permalink: /teaching/
 author_profile: true
 ---
 
+---
+layout: archive
+title: "Teaching"
+permalink: /teaching/
+author_profile: true
+---
+
 {% include base_path %}
 
-<h2>Affiliations</h2> <hr>
+<style>
+    /* Styling to match the PDF CV look */
+    .cv-container {
+        font-family: "Times New Roman", Times, serif; 
+        max-width: 800px;
+    }
+    
+    .cv-header {
+        background-color: #002060; /* Dark blue background */
+        color: white;
+        padding: 5px 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    .cv-subheader {
+        background-color: #dbe5f1; /* Light blue background */
+        color: #002060;
+        padding: 5px 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .cv-list {
+        padding-left: 20px; /* Space for the numbers */
+    }
+
+    .cv-list > li {
+        margin-bottom: 20px;
+    }
+
+    .cv-item {
+        display: flex;
+        justify-content: space-between; /* Pushes meta to the right */
+        align-items: flex-start;
+    }
+
+    .cv-details {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .cv-meta {
+        text-align: right;
+        min-width: 150px;
+        color: #002060;
+    }
+
+    .institution-name {
+        font-size: 1.05em;
+        color: #002060;
+    }
+
+    .role-title {
+        font-style: italic;
+        color: #002060;
+    }
+
+    .subject-list {
+        margin-top: 5px;
+        padding-left: 40px; /* Indent the bullet points */
+        list-style-type: disc;
+    }
+    
+    .subject-list li {
+        margin-bottom: 3px;
+        color: #002060;
+    }
+</style>
+
+<div class="cv-container">
+    <div class="cv-header">Academic Experience</div>
+    <div class="cv-subheader">Appointments</div>
+
+    <ol class="cv-list">
+        
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Southern Academy of Higher Education</span><br>
+                    <span class="role-title">Role: Lecturer and Unit Coordinator</span>
+                    <ul class="subject-list">
+                        <li>Programming Fundamentals (UG)</li>
+                        <li>Object-oriented Programming (UG)</li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Sydney, Australia<br>
+                    Mar 2026 &ndash; Present
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Macquarie University</span><br>
+                    <span class="role-title">Role: Sessional Academic</span>
+                    <ul class="subject-list">
+                        <li>Data Science (UG/PG)</li>
+                        <li>Decision Making (UG/PG)</li>
+                        <li>Automated Decision Making in Business (UG/PG)</li>
+                        <li>Web Development (UG/PG)</li>
+                        <li>Database Systems (UG/PG)</li>
+                        <li>Data Structures and Algorithms (UG/PG)</li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Sydney, Australia<br>
+                    May 2022 &ndash; Present
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Quaid-i-Azam University</span><br>
+                    <span class="role-title">Role: Visiting Lecturer</span>
+                    <ul class="subject-list">
+                        <li>Discrete Mathematics (UG)</li>
+                        <li>Object-oriented Programming (UG)</li>
+                        <li>Fundamentals of IT (UG)</li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Islamabad, Pakistan<br>
+                    Feb 2020 &ndash; Feb 2021
+                </div>
+            </div>
+        </li>
+
+    </ol>
+</div>
+
+{% include base_path %}
+---
+<!-- <h2>Appointments</h2> <hr>
 <ol>
   <li>School of Computing, Macquarie University, Sydney, Australia</li>
   <li>Department of Information Technology, Quaid-i-Azam University, Islamabad, Pakistan</li>
@@ -123,4 +271,5 @@ Undergraduate (UG) / Postgraduate (PG)
       <li>[S15]<sup>4‡</sup></li>
     </ul>
   </li>
-</ul>
+</ul> -->
+---
