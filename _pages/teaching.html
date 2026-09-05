@@ -15,34 +15,20 @@ author_profile: true
 {% include base_path %}
 
 <style>
-    /* Styling to match the PDF CV look */
+    /* Keeps your website's default font and style */
     .cv-container {
-        font-family: "Times New Roman", Times, serif; 
-        max-width: 800px;
-    }
-    
-    .cv-header {
-        background-color: #002060; /* Dark blue background */
-        color: white;
-        padding: 5px 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 0;
+        max-width: 100%;
     }
 
-    .cv-subheader {
-        background-color: #dbe5f1; /* Light blue background */
-        color: #002060;
-        padding: 5px 10px;
-        font-size: 1.2em;
+    .section-title {
+        font-size: 1.5em;
         font-weight: bold;
-        margin-top: 0;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .cv-list {
-        padding-left: 20px; /* Space for the numbers */
+        padding-left: 20px;
     }
 
     .cv-list > li {
@@ -51,7 +37,7 @@ author_profile: true
 
     .cv-item {
         display: flex;
-        justify-content: space-between; /* Pushes meta to the right */
+        justify-content: space-between;
         align-items: flex-start;
     }
 
@@ -62,38 +48,36 @@ author_profile: true
 
     .cv-meta {
         text-align: right;
-        min-width: 150px;
-        color: #002060;
+        min-width: 160px;
     }
 
     .institution-name {
-        font-size: 1.05em;
-        color: #002060;
+        font-weight: bold;
     }
 
     .role-title {
         font-style: italic;
-        color: #002060;
     }
 
     .subject-list {
         margin-top: 5px;
-        padding-left: 40px; /* Indent the bullet points */
+        padding-left: 20px;
         list-style-type: disc;
     }
     
     .subject-list li {
         margin-bottom: 3px;
-        color: #002060;
     }
 </style>
 
 <div class="cv-container">
-    <div class="cv-header">Academic Experience</div>
-    <div class="cv-subheader">Appointments</div>
+    
+    <!-- Appointments Section -->
+    <div class="section-title">Appointments</div>
+    <hr>
 
     <ol class="cv-list">
-        
+        <!-- Entry 1 -->
         <li>
             <div class="cv-item">
                 <div class="cv-details">
@@ -111,6 +95,7 @@ author_profile: true
             </div>
         </li>
 
+        <!-- Entry 2 -->
         <li>
             <div class="cv-item">
                 <div class="cv-details">
@@ -132,6 +117,7 @@ author_profile: true
             </div>
         </li>
 
+        <!-- Entry 3 -->
         <li>
             <div class="cv-item">
                 <div class="cv-details">
@@ -150,7 +136,101 @@ author_profile: true
             </div>
         </li>
 
+        <!-- Entry 4 -->
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Foundation University Islamabad</span><br>
+                    <span class="role-title">Role: Lecturer</span>
+                    <ul class="subject-list">
+                        <li>Data Science (UG/PG)</li>
+                        <li>Programming Fundamentals (UG)</li>
+                        <li>Database Systems (UG)</li>
+                        <li>Data Structures and Algorithms (UG)</li>
+                        <li>Object-oriented Programming (UG)</li>
+                        <li>Design and Analysis of Algorithms (UG)</li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Rawalpindi, Pakistan<br>
+                    Jan 2018 &ndash; Jan 2020
+                </div>
+            </div>
+        </li>
+
+        <!-- Entry 5 -->
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">International Islamic University Islamabad</span><br>
+                    <span class="role-title">Role: Teaching Assistant</span>
+                    <ul class="subject-list">
+                        <li>Data Mining (UG/PG)</li>
+                        <li>Research Methods (PG)</li>
+                        <li>Programming Fundamentals (UG)</li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Islamabad, Pakistan<br>
+                    Sep 2015 &ndash; Sep 2017
+                </div>
+            </div>
+        </li>
     </ol>
+
+
+    <!-- Supervision Section -->
+    <div class="section-title">Supervision</div>
+    <hr>
+
+    <ol class="cv-list">
+        <!-- Supervision Entry 1 -->
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Macquarie University</span>
+                    <ul class="subject-list">
+                        <li>
+                            HDR and Postgraduate Student Mentorship<br>
+                            <span class="role-title">Role: Research Mentor</span> (Provided technical mentorship and research guidance to Master's and early-stage PhD candidates)
+                        </li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Sydney, Australia<br>
+                    Jun 2023 &ndash; Dec 2024
+                </div>
+            </div>
+        </li>
+
+        <!-- Supervision Entry 2 -->
+        <li>
+            <div class="cv-item">
+                <div class="cv-details">
+                    <span class="institution-name">Foundation University Islamabad</span>
+                    <ul class="subject-list">
+                        <li>
+                            Location and User Behavior-based Deception Detection in Social Media<br>
+                            <span class="role-title">Role: Principal Supervisor</span>
+                        </li>
+                        <li>
+                            Heterogeneous Anomaly Detection in MAG using Deep Clustering<br>
+                            <span class="role-title">Role: Principal Supervisor</span>
+                        </li>
+                        <li>
+                            Ranking Higher Education Institutions using Publicly Verifiable Sources<br>
+                            <span class="role-title">Role: Co-Supervisor</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cv-meta">
+                    Rawalpindi, Pakistan<br>
+                    Jan 2018 &ndash; Jan 2020
+                </div>
+            </div>
+        </li>
+    </ol>
+
 </div>
 
 {% include base_path %}
