@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Malik Khizar Hayat"
 excerpt: "About me"
 sidebar: true
 author_profile: true
